@@ -25,5 +25,5 @@ console.log(name);
 //Fetch Api
 const res = await fetch('https://swapi.dev/api/films')
 const resp = await res.json();
-console.log(resp.results)
+console.log(resp)
 
