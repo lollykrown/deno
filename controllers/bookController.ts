@@ -24,6 +24,8 @@ export const create_book = async (ctx: Context) => {
   const id = v4.generate();
   const book = { id, title, author, pages }
   books.push(book)
+
+  return ctx.json(book, 20)
 }
 export const delete_books = (ctx: Context) => {
   
