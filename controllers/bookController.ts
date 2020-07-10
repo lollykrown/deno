@@ -32,7 +32,7 @@ export const delete_books = (ctx: Context) => {
   const book = books.find((b: Book) => b.id === id);
   if (book) {
     books = books.filter((b: Book) => b.id !== id);
-    reyurn ctx.json(book, 200)
+    return ctx.json(book, 200);
   }
   return ctx.string('no book found with the id', 404)
 }
