@@ -28,5 +28,10 @@ export const create_book = async (ctx: Context) => {
   return ctx.json(book, 20)
 }
 export const delete_books = (ctx: Context) => {
-  
+  const { id } = ctx.params;
+  const book = books.find((b: Book) => b.id === id);
+  if (book) {
+    books = books.filter((b: Book) => b.id !== id)
+  }
+  return ctx.string('no book found with the id', 404)
 }
