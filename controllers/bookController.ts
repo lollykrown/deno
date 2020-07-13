@@ -16,7 +16,7 @@ export const get_book = (ctx: Context) => {
   if (book) {
     return ctx.json(book, 200)
   }
-  return ctx.string('no book found with the id', 404)
+  return ctx.string('No book found with the id', 404)
   // return ctx.json(books[+id], 200)
 }
 export const create_book = async (ctx: Context) => {
@@ -34,5 +34,5 @@ export const delete_books = (ctx: Context) => {
     books = books.filter((b: Book) => b.id !== id);
     return ctx.json(book, 200);
   }
-  return ctx.string('no book found with the id', 404)
+  return ctx.string('No book found with the id', 404)
 }
